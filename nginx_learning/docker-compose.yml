@@ -1,0 +1,7 @@
+web:
+  image: nginx
+  ports:
+    - "9004:9004"
+  volumes:
+    - ./test-default.conf:/etc/nginx/nginx.conf:ro
+  command: [nginx-debug, '-g', 'daemon off;']
